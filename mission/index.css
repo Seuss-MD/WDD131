@@ -1,0 +1,45 @@
+*{
+    font-family: "Crimson Pro", serif;
+    font-weight: 440;
+}
+
+h1{
+    font-size: 48px;
+    text-align: center;
+    font-family: "Crimson Pro", serif;
+    font-weight: 450;
+    margin-bottom: .4em;
+;
+}
+h2{
+    font-size: 23px;
+    text-align: center;
+    color: #4F9ACF;
+    margin: 0 auto;
+}
+hr{
+    margin-top: 0;
+    margin-bottom: 36px;
+}
+
+#content{
+    max-width: 60%;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+#mission{
+    font-style: italic;
+}
+
+li{
+    list-style: number;
+    margin-bottom: 18px;
+    line-height: 1.5em;
+}
+
+img{
+    display: block;
+    margin: 40px auto;
+    width: 20%;
+}
