@@ -1,18 +1,21 @@
 
 body {
+    /* background-size: cover; */
     background-size: 100vw 100vh;
     margin: 0;
     padding: 20px;
     transition: background-image 1s ease;
-    background-image: url();
+    font-size: 20px;
 }
 
 .container {
     text-align: center;
-    padding: 2rem;
+    padding: 2rem; 
     max-width: 600px;
     margin: 2rem auto;
 }
+/* em is the deafault setting of the parent
+rem is the default setting for the root element */
 
 select {
     padding: 0.5rem;
