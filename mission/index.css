@@ -3,6 +3,10 @@
     font-weight: 440;
 }
 
+body{
+    margin: 0;
+}
+
 h1{
     font-size: 48px;
     text-align: center;
@@ -16,6 +20,7 @@ h2{
     text-align: center;
     color: #4F9ACF;
     margin: 0 auto;
+    padding-bottom: 6px;
 }
 hr{
     margin-top: 0;
@@ -23,9 +28,11 @@ hr{
 }
 
 #content{
-    max-width: 60%;
+    max-width: 40%;
     margin: 0 auto;
     padding: 50px;
+    margin-top: 1.5em;
+    border: black solid 0.5px;
 }
 
 #mission{
