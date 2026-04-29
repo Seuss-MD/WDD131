@@ -1,11 +1,10 @@
 *{
     font-family: "Crimson Pro", serif;
     font-weight: 440;
-}
-
-body{
     margin: 0;
 }
+
+
 
 h1{
     font-size: 48px;
@@ -37,11 +36,13 @@ hr{
 
 #mission{
     font-style: italic;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 li{
     list-style: number;
-    margin-bottom: 18px;
+    margin-bottom: 0.75em;
     line-height: 1.5em;
 }
 
