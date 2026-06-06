@@ -1,0 +1,129 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #bfd0dc;
+  color: #000;
+}
+
+.wrapper {
+  width: min(90%, 1200px);
+  margin: 55px auto;
+  padding: 55px 65px;
+  background-color: white;
+  border-radius: 18px;
+}
+
+h1 {
+  margin: 0 0 40px;
+  font-size: 54px;
+  font-weight: 800;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px 30px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+.full {
+  grid-column: 1 / -1;
+}
+
+label {
+  margin-bottom: 8px;
+  font-size: 28px;
+  font-weight: 500;
+}
+
+input,
+select {
+  width: 100%;
+  height: 66px;
+  padding: 12px 18px;
+  font-size: 28px;
+  border: 2px solid #777;
+  border-radius: 4px;
+  background-color: white;
+}
+
+input:focus,
+select:focus {
+  outline: 3px solid #0b64d8;
+  outline-offset: 1px;
+}
+
+button {
+  height: 68px;
+  font-size: 28px;
+  background-color: #bfd0dc;
+  border: 3px solid #444;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #aec4d2;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+#messages {
+  margin-top: 28px;
+  font-size: 22px;
+}
+
+.error-box {
+  padding: 18px 22px;
+}
+
+.error-box h2,
+.ticket-box h2 {
+  margin-top: 0;
+}
+
+.error-box li {
+  margin-bottom: 8px;
+  
+}
+
+.ticket-box {
+  padding: 20px 24px;
+  border: 3px solid #2f7d32;
+  background-color: #f0fff1;
+}
+
+.ticket-box p {
+  margin: 10px 0;
+}
+
+@media (max-width: 800px) {
+  .wrapper {
+    padding: 35px 25px;
+  }
+
+  h1 {
+    font-size: 42px;
+  }
+
+  form {
+    grid-template-columns: 1fr;
+  }
+
+  label,
+  input,
+  select,
+  button {
+    font-size: 22px;
+  }
+}
