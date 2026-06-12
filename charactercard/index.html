@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js" defer></script>
+    <title>Character Card</title>
+    <meta name="description" content="A simple character card with stats and actions.">
+
+
+    <!-- Open Graph (Facebook, LinkedIn, etc.) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Character Card">
+    <meta property="og:description" content="A simple character card with stats and actions.">
+    <meta property="og:url" content="https://seuss-md.github.io/WDD131/charactercard/index.html">
+    <meta property="og:image" content="https://andejuli.github.io/wdd131/character_card/snortleblat.webp">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Character Card">
+    <meta name="twitter:description" content="A simple character card with stats and actions.">
+    <meta name="twitter:image" content="https://andejuli.github.io/wdd131/character_card/snortleblat.webp">
+
+    <!-- One favicon (ICO works everywhere) -->
+    <link rel="icon" href="favicon.ico">
+</head>
+<body>
+    <div class="card">
+        <img src="https://andejuli.github.io/wdd131/character_card/snortleblat.webp" alt="Character Image" class="image">
+        <div class="name">Character Name</div>
+        <div class="stats">
+            <p class="class"><strong>Class:</strong> </p>
+            <p class="level"><strong>Level:</strong> </p>
+            <p class="health"><strong>Health:</strong> </p>
+        </div>
+        <div class="buttons">
+            <button onclick="CharacterCard.attacked()">Attacked</button>
+            <button onclick="CharacterCard.LevelUp()">Level Up</button>
+        </div>
+    </div>
+</body>
+</html>
