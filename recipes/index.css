@@ -16,6 +16,7 @@ footer {
 }
 
 header {
+  display: flex;
   width: min(70%, 640px);
   margin:  auto;
   padding: 3rem 0.5rem 1.5rem;
@@ -25,8 +26,9 @@ header {
   width: 100%;
   display: flex;
   justify-content: flex-start;
-  align-items: center;
   gap: 0.5rem;
+  align-items: flex-end;
+
 }
 
 .logo-title img {
@@ -64,20 +66,28 @@ h2 {
   display: flex;
   width: 100%;
   margin: 1rem 0 1rem;
-  border: 3px solid #111;
-  border-radius: 9px;
+  border: 1px solid #111;
   overflow: hidden;
+  border-radius: 9px;
+  max-width: 640px;
+  margin: -px;
 }
+
 
 .search input {
   flex: 1;
   min-width: 0;
-  padding: 0.6rem;
+  padding: 0rem;
   font-size: 1rem;
+  margin-right: 0;
+  margin-left: 3px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  border-radius: 3px;
   border: none;
   outline: none;
-  font-weight: bold;
 }
+
 
 .search button {
   position: relative;
@@ -85,7 +95,6 @@ h2 {
   padding: 0.35rem;
   border: none;
   background: white;
-  cursor: pointer;
 }
 
 .search button::before {
@@ -96,6 +105,11 @@ h2 {
   bottom: 2px;
   width: 1px;
   background-color: #111;
+}
+
+.search input:focus {
+  border: 1px solid blue;
+  border-right: none;
 }
 
 .search button img {
@@ -114,7 +128,7 @@ hr {
   display: flex;
   flex-direction: column;
   gap: 1px;
-  border: 3px solid #111;
+  border: 1px solid #111;
   border-radius: 8px;
   padding: 1rem;
   margin-top: 1rem;
@@ -131,17 +145,18 @@ hr {
   align-items: flex-start;
 }
 
-.tag {
-  display: inline-block;
-  margin: 0;
-  padding: 6px 4px;
-  font-weight: bold;
-  border: 1px solid #bebebe;
-  border-radius: 3px;
-  background-color: #eee;
-  font-size: 1rem;
-  line-height: 1;
+.tags {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0;
+  align-items: center;
 }
+.tags button {
+  font-weight: bold;
+
+}
+
 
 .rating {
   display: flex;
@@ -172,11 +187,9 @@ hr {
 }
 
 .description {
-  display: none;
   margin-top: 0.4rem;
   font-size: 0.7rem;
   line-height: 1;
-  font-weight: bold;
 }
 
 footer {
