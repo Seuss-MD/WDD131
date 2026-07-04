@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8" />
+		<title>Site Plan</title>
+		<link type="text/css" rel="stylesheet" href="styles/site-plan.css" />
+	</head>
+
+	<body>
+		<header>
+			<h1>Paste to Plate Project Plan</h1>
+			<h2>FirstName LastName</h2>
+			<h2>WDD 131</h2>
+			<!-- In the header above, add the name or your site, your name and class number. For example if you are in section 3 you would put WDD 131.03 -->
+		</header>
+		<main>
+			
+			<hr />
+			<h2>Overview</h2>
+			<h3>Purpose</h3>
+			<p>
+				The purpose of Paste to Plate is to help users turn messy recipe text from a website into a clean, organized recipe card. Users will be able to paste recipe text, enter basic recipe information, preview the cleaned-up recipe, upload an existing recipe CSV file, add the new recipe to that CSV data, and download an updated CSV file to save on their device.
+			</p>
+			<!-- change this -->
+
+			<h3>Audience</h3>
+			<p>
+				The intended audience is people who like cooking and want an easy way to save online recipes without copying everything by hand into a document. This site is especially useful for students, families, beginner cooks, or anyone who wants a simple digital recipe book that can be saved as a CSV file and opened again later.
+			</p>
+			<!-- change this -->
+
+			<h3>Dynamic elements</h3>
+			<p>
+				JavaScript will be used to make the recipe converter and recipe book interactive. The user will paste recipe text into a text area, enter a title and category, and click a button to convert the text into a recipe card. JavaScript will select form elements from the DOM, listen for button clicks and file uploads, check if required fields are filled in, create recipe objects, store the recipes in an array, read an uploaded CSV file, add new recipes to the existing CSV data, display all recipes on a second page, and create a downloadable updated CSV file. The project will use multiple functions, conditional branching, objects, arrays, and array methods such as forEach(), map(), and filter().
+			</p>
+			<!-- change this -->
+
+			<hr />
+			<h2>Branding</h2>
+			<h3>Website Logo</h3>
+			<!-- Replace this with some sort of logo for your site.  A logo can be as simple as the name of your site in a nice font :) -->
+			<img class="img" src="img/logo.png" alt="Paste to Plate logo" />
+			<hr />
+			<h2>Style Guide</h2>
+
+			<h3>Color Palette</h3>
+
+			Palette URL:
+			<a
+				href="https://coolors.co/7a4e2d-fff3e0-3f7d20-d96c06-2f2f2f"
+				target="_blank"
+				>https://coolors.co/7a4e2d-fff3e0-3f7d20-d96c06-2f2f2f</a
+			>
+
+			<table class="colors">
+				<tbody>
+					<tr>
+						<th>Primary</th>
+						<th>Secondary</th>
+						<th>Accent 1</th>
+						<th>Accent 2</th>
+					</tr>
+
+					<tr>
+						<td class="primary">#7A4E2D</td>
+						<td class="secondary">#FFF3E0</td>
+						<td class="accent1">#3F7D20</td>
+						<td class="accent2">#D96C06</td>
+					</tr>
+				</tbody>
+			</table>
+
+			
+			<hr />
+
+			<h2>Pseudocode</h2>
+
+            <section>
+            <h4>Setup</h4>
+            <ol>
+                <li>
+                    Create two HTML pages: an <strong>index page</strong> for converting pasted recipe text and a <strong>recipe book page</strong> for uploading and viewing a recipe CSV file.
+                </li>
+                <li>
+                    On the index page, add a header, navigation links, a short explanation of the app, a cooking-related image, a form area, a recipe preview area, a CSV upload input, a message area, and a button to download the updated CSV file.
+                </li>
+                <li>
+                    On the recipe-book page, add a header, navigation links back to the home page, a CSV upload input, search and filter controls, a section for recipe cards, and a message area for when no recipes are loaded.
+                </li>
+            </ol>
+
+            <h4>JavaScript</h4>
+            <ol>
+                <li>
+                    Create an empty <code>recipes</code> array in JavaScript to store all recipe objects.
+                </li>
+                <li>
+                    Each recipe object will include an <code>id</code>, <code>title</code>, <code>category</code>, <code>ingredients</code>, <code>instructions</code>, <code>originalText</code>, and <code>dateSaved</code>.
+                </li>
+                <li>
+                    Use <code>document.querySelector</code> to select the title input, category menu, recipe text area, convert button, preview container, message area, CSV upload input, recipe list container, search input, filter controls, and download button.
+                </li>
+            </ol>
+
+            <h4>Main Functions</h4>
+            <ol>
+                <li>
+                    Write a <code>getRecipeInput</code> function that collects the title, category, and pasted recipe text from the form fields.
+                </li>
+                <li>
+                    Write a <code>validateRecipeInput</code> function that checks whether the title or recipe text is missing. If a required field is empty, display an error message. Otherwise, allow the recipe to be converted.
+                </li>
+                <li>
+                    Write a <code>parseRecipeText</code> function that separates the pasted text into smaller lines and creates simple ingredient and instruction lists.
+                </li>
+                <li>
+                    Write a <code>createRecipeObject</code> function that creates one recipe object using the title, category, ingredients, instructions, original text, unique id, and date saved.
+                </li>
+                <li>
+                    Write a <code>displayRecipePreview</code> function that updates the DOM and shows the cleaned recipe card on the page.
+                </li>
+            </ol>
+
+            <h4>Recipe Book</h4>
+            <ol>
+                <li>
+                    Write a <code>handleCSVUpload</code> function that listens for a CSV file upload.
+                </li>
+                <li>
+                    Use <code>FileReader</code> to read the uploaded CSV file, split the CSV text into rows, convert each row into a recipe object, and store those objects in the <code>recipes</code> array.
+                </li>
+                <li>
+                    Write an <code>addRecipeToCSVData</code> function that adds the new recipe object to the existing <code>recipes</code> array.
+                </li>
+                <li>
+                    Write a <code>displaySavedRecipes</code> function for the recipe-book page. This function will use <code>forEach()</code> to loop through the recipes array and display each recipe as a card.
+                </li>
+                <li>
+                    Write a <code>filterRecipes</code> function that uses <code>filter()</code> to show only recipes that match the selected category or search term.
+                </li>
+            </ol>
+
+            <h4>CSV Download</h4>
+            <ol>
+                <li>
+                    Write a <code>convertRecipesToCSV</code> function that uses <code>map()</code> to turn each recipe object into a CSV row.
+                </li>
+                <li>
+                    Write a <code>downloadUpdatedCSV</code> function that creates a CSV file with a <code>Blob</code>, creates a temporary download link, and lets the user save the updated CSV file to their device.
+                </li>
+                <li>
+                    Add event listeners to the convert button, CSV upload input, download button, search input, and category filter.
+                </li>
+            </ol>
+        </section>
+
+			<hr />
+			<h2>Wireframes</h2>
+
+
+			<h3>Landing Page - Mobile View</h3>
+			<p>
+				The mobile landing page will let users paste recipe text, convert it into a clean recipe card, upload an existing CSV file, add the new recipe to the loaded recipe data, and download an updated CSV file. On mobile, the sections will stack vertically for easy reading.
+			</p>
+            <img class="img" src="img/mobileLanding.png" alt="Mobile wireframe for Paste to Plate landing page" />
+
+			<h3>Landing Page - Desktop View</h3>
+			<p>
+				The desktop landing page will use a wider layout. The header and navigation will stretch across the top. The recipe input form and recipe preview will be placed side by side so users can paste recipe text on the left and immediately see the cleaned recipe card on the right. The CSV upload and download controls will appear below the main converter area.
+			</p>
+
+            <img class="imgDesktop" src="img/desktopLanding.png" alt="Desktop wireframe for Paste to Plate landing page" />
+
+			<h3>Recipe Book Page - Mobile View</h3>
+			<p>
+				The second page will be called recipe-book.html. It will let users upload their saved recipe CSV file from a specific location on their device, such as their Downloads folder or a Recipes folder. After the CSV is uploaded, JavaScript will read the file and display all recipes at once as recipe cards. Users will also be able to search, filter, and download the updated CSV again if they make changes.
+			</p>
+            
+            <img class="img" src="img/mobileBook.png" alt="Mobile wireframe for Paste to Plate recipe book page" />
+
+			<h3>Recipe Book Page - Desktop View</h3>
+			<p>
+				The desktop recipe book page will show all uploaded recipes in a larger grid layout. Users will upload their saved CSV file, then JavaScript will read the file and display the recipes as cards. Search and filter tools will appear on the left side, while the recipe cards will appear on the right side.
+			</p>
+            
+            <img class="imgDesktop" src="img/desktopBook.png" alt="Desktop wireframe for Paste to Plate recipe book page" />
+		</main>
+	</body>
+</html>
