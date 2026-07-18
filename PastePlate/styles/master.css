@@ -1,0 +1,155 @@
+
+:root {
+	--primary-color: #7a4e2d;
+	--secondary-color: #fff3e0;
+	--accent1-color: #3f7d20;
+	--accent2-color: #d96c06;
+
+	--heading-font: "IM Fell French Canon SC", serif;
+	--paragraph-font: Lato, Helvetica, sans-serif;
+
+	--headline-color-on-white: var(--primary-color);
+	--headline-color-on-color: white;
+	--paragraph-color-on-white: var(--primary-color);
+	--paragraph-color-on-color: white;
+	--paragraph-background-color: var(--primary-color);
+
+	--nav-link-color: var(--primary-color);
+	--nav-background-color: var(--secondary-color);
+	--nav-hover-link-color: white;
+	--nav-hover-background-color: var(--primary-color);
+}
+
+body {
+	margin: 0;
+}
+
+
+nav {
+	height: 3em;
+	margin-bottom: 1px;
+
+	display: flex;
+	align-items: stretch;
+
+	background-color: var(--nav-background-color);
+	font-family: var(--paragraph-font);
+}
+
+nav ul {
+	flex: 1;
+
+	display: flex;
+	justify-content: right;
+	align-items: stretch;
+	gap: 0;
+
+	margin: 0;
+	padding: 0;
+	padding-right: 1em;
+	list-style: none;
+}
+
+nav li {
+	display: flex;
+}
+
+nav a {
+	display: flex;
+	align-items: flex-end;
+	padding: 0 1.25em 0.6em;
+    object-fit: cover;
+	margin: 0 1.5px;
+	margin-top: 2.5em;
+    
+
+	color: var(--nav-link-color);
+	border-radius: 25px 25px 0 0;
+	text-decoration: none;
+
+	transition:
+		background-color 0.3s ease,
+		color 0.1s ease;
+}
+
+nav a:hover {
+	color: var(--accent1-color);
+	background-color: var(--nav-hover-background-color);
+}
+
+.img-logo {
+	display: block;
+	height: 100%;
+	width: auto;
+}
+
+main {
+	padding: 0;
+}
+
+.hero {
+    position: relative;
+	width: 100%;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	margin: 0;
+	overflow: hidden;
+}
+
+.img-hero {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+
+}
+.hero-text {
+	position: absolute;
+	bottom: 0;
+	margin: 0;
+    width: 100%;
+	padding: 4rem 2rem 1.5rem;
+
+	color: var(--paragraph-color-on-color);
+	background: linear-gradient(
+		rgba(0, 0, 0, 0.35),
+		rgba(0, 0, 0, 1)
+	);
+	font-family: var(--paragraph-font);
+	font-size: 1.2rem;
+	line-height: 1.6;
+	text-align: center;
+
+	/* Circular transparent cutout at the top */
+	-webkit-mask:
+		radial-gradient(
+			ellipse 75% 55px at 50% 0,
+			transparent 98%,
+			black 100%
+		);
+	mask:
+		radial-gradient(
+			ellipse 75% 55px at 50% 0,
+			transparent 98%,
+			black 100%
+		);
+
+	filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.35));
+}
+
+.card {
+    border: var(--primary-color);
+    margin: 1em;
+    border: 2px solid var(--primary-color);
+
+    background-color: var(--secondary-color);
+
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+}
+
+

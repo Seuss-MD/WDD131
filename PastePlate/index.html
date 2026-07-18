@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paste to Plate</title>
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/master.css">
+    <script src="script/index.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <img class="img-logo" src="img/logo.png" alt="Paste to Plate logo">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="recipe-book.html">Recipe Book</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>    
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <img class="img-hero" src="img/hero.jpg" alt="Hero image of ingredients">
+            <p class="hero-text">Paste to Plate is a recipe card and recipe book converter 
+                that takes messy recipe text from a website and displays it cleaned up. 
+                You can save it as a CSV file for later use.</p>
+        </section>
+        <div class="desktop">
+
+            <!-- Input Form for recipe -->
+            <section class="form">
+                <h2>Paste your recipe</h2>
+                
+                <form id="recipe-form" class="recipe-form">
+                    <label for="recipe-title">Title:</label>
+                    <input type="text" id="recipe-title" name="recipe-title" required>
+                    
+                    <label for="recipe-category">Category:</label>
+                    <input type="text" id="recipe-category" name="recipe-category" required>
+                    
+                    <label for="recipe-text">Directions:</label>
+                    <textarea id="recipe-text" name="recipe-text" rows="10" required></textarea>
+                    
+                    <div class="btn-submit">
+                        <p class="btn-text">Convert Recipe</p>
+                    </div>
+                </form>
+            </section>
+            
+            <!-- Recipe Card Preview -->
+            <section class="card">
+                <h2>Preview</h2>
+                
+                <div class="recipe-card">
+                    <h3 id="card-title">Title is missing</h3>
+                    <p id="card-category">Category: Missing</p>
+                    <p id="card-ingredients">Ingredients: Missing</p>
+                    <p id="card-directions">Directions: Missing</p>
+                </div>
+                <!-- dynamic content -->
+                
+                <!-- Download Updated CSV btn or create a new file-->
+                <div class="btn-update">
+                    <p class="btn-text">Update CSV</p>
+                </div>
+            </section>
+        </div>
+
+
+    </main>
+
+    <footer>
+
+    </footer>
+    
+</body>
+</html>

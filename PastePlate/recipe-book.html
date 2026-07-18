@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paste to Plate | Recipe Book</title>
+    <link rel="stylesheet" href="styles/recipe-book.css">
+    <link rel="stylesheet" href="styles/master.css">
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <img class="img-logo" src="img/logo.png" alt="Paste to Plate logo">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="recipe-book.html">Recipe Book</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>    
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <img class="img-hero" src="img/recipe-book.jpg" alt="Hero image of recipe book">
+            <p class="hero-text"> Load a CSV file into the recipe book.</p>
+        </section>
+        
+        <!-- Upload  Existing CSV -->
+        <section class="load">
+            <div class="btn-load">
+                <p class="btn-text">Load Recipe Book</p>
+            </div>
+            
+        </section>
+
+        <!-- Input Form for recipe -->
+        <section class="search">
+        <div class="search-bar">
+        <label for="search-terms">Search:</label>
+        <select name="search terms" id="search-terms">
+            <option value="title">Name</option>
+            <option value="category">Category</option>
+            <option value="ingredients">Ingredients</option>
+            <option value="directions">Directions</option>
+        </select>
+
+        <input type="text" name="search" id="search" placeholder="Search">
+        </div>
+
+
+        <img class="img--search" src="img/search-icon.png" alt="Search icon">
+        </section>
+        
+        <!-- Recipe Book -->
+        <h2 class="recipe-book-heading">Recipe Book</h2>
+        <section class="recipe-book">
+            <h3>No Recipes Found</h3>
+        <!-- dynamic content -->
+        </section>
+
+
+    </main>
+
+    <footer>
+
+    </footer>
+    
+</body>
+</html>
