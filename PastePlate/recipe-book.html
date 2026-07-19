@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Load, browse, and search recipes from a Paste to Plate CSV recipe book by name, category, ingredients, or directions.">
     <title>Paste to Plate | Recipe Book</title>
     <link rel="stylesheet" href="styles/recipe-book.css">
     <link rel="stylesheet" href="styles/master.css">
@@ -12,7 +13,7 @@
 <body>
     <header>
         <nav>
-            <img class="img-logo" src="img/logo.png" alt="Paste to Plate logo">
+            <img class="img-logo" src="img/logo.png" alt="Paste to Plate logo" width="1024" height="1024">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="recipe-book.html">Recipe Book</a></li>
@@ -23,13 +24,23 @@
 
         <!-- Hero Section -->
         <section class="hero">
-            <img class="img-hero" src="img/recipe-book.jpg" alt="Hero image of recipe book">
+            <img class="img-hero" src="img/recipe-book.webp" alt="Hero image of recipe book" width="600" height="400">
             <p class="hero-text"> Load a CSV file into the recipe book.</p>
+        </section>
+
+        <section class="book-help" aria-labelledby="book-help-heading">
+            <h2 id="book-help-heading">How to Use the Recipe Book</h2>
+            <ol>
+                <li>Select <strong>Load Recipe Book</strong> and choose a CSV created by Paste to Plate.</li>
+                <li>Your saved recipes will appear below as recipe cards.</li>
+                <li>Select a recipe card to see its ingredients and complete instructions.</li>
+                <li>Use the search icon at the bottom-right to find recipes by name, category, ingredients, or directions.</li>
+            </ol>
         </section>
         
         <!-- Upload  Existing CSV -->
         <section class="load">
-            <button type="button" class="btn-load">Load Recipe Book</button>
+            <div class="btn-load" role="button" tabindex="0">Load Recipe Book</div>
             <input type="file" id="csv-file" accept=".csv,text/csv" hidden>
             <p id="load-message" role="status" aria-live="polite"></p>
         </section>
@@ -38,22 +49,39 @@
         <dialog class="search-modal" id="search-modal">
             <div class="search-modal-heading">
                 <h2>Search Recipes</h2>
-                <button type="button" class="btn-close-search" aria-label="Close search">&times;</button>
+                <div class="btn-close-search" role="button" tabindex="0" aria-label="Close search">&times;</div>
             </div>
             <div class="search-bar">
                 <label for="search-terms">Search by:</label>
                 <select name="search-terms" id="search-terms">
                     <option value="title">Name</option>
                     <option value="category">Category</option>
+                    <option value="ingredients">Ingredients</option>
                     <option value="directions">Directions</option>
                 </select>
                 <input type="search" name="search" id="search" placeholder="Type to search">
             </div>
         </dialog>
 
-        <button type="button" class="btn-search" aria-label="Open recipe search">
-            <img class="img--search" src="img/search-icon.png" alt="">
-        </button>
+        <dialog class="recipe-modal" id="recipe-modal">
+            <div class="recipe-modal-heading">
+                <h2 id="recipe-modal-title">Recipe</h2>
+                <div class="btn-close-recipe" role="button" tabindex="0" aria-label="Close recipe">&times;</div>
+            </div>
+            <p class="recipe-modal-category" id="recipe-modal-category"></p>
+            <section class="recipe-modal-section">
+                <h3>Ingredients</h3>
+                <ul id="recipe-modal-ingredients"></ul>
+            </section>
+            <section class="recipe-modal-section">
+                <h3>Instructions</h3>
+                <ol id="recipe-modal-instructions"></ol>
+            </section>
+        </dialog>
+
+        <div class="btn-search" role="button" tabindex="0" aria-label="Open recipe search">
+            <img class="img--search" src="img/search-icon.png" alt="" width="512" height="512">
+        </div>
         
         <!-- Recipe Book -->
         <h2 class="recipe-book-heading">Recipe Book</h2>

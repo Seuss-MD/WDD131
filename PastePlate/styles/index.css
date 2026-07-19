@@ -93,6 +93,24 @@ input, textarea {
     margin-top: 2em;
 }
 
+.preview-help {
+    margin: 0.5rem 0 1rem;
+    color: var(--paragraph-color-on-white);
+    font-family: var(--paragraph-font);
+    font-style: italic;
+}
+
+.preview-label {
+    font-weight: bold;
+}
+
+.preview-input {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0.25rem 0 1rem;
+    background-color: white;
+}
+
 .card {
 
     margin-top: 2em;

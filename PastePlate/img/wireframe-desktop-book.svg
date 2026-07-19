@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="700" viewBox="0 0 1100 700">
+  <rect width="1099" height="699" fill="#fff" stroke="#222"/>
+  <g fill="none" stroke="#555" stroke-width="3">
+    <rect x="28" y="20" width="100" height="52"/><rect x="870" y="20" width="86" height="52"/><rect x="964" y="20" width="108" height="52"/>
+    <rect x="28" y="92" width="1044" height="168"/><rect x="190" y="205" width="720" height="36" fill="#eee"/>
+    <rect x="170" y="280" width="760" height="100"/><rect x="440" y="397" width="220" height="42"/>
+    <rect x="28" y="478" width="330" height="185"/><rect x="385" y="478" width="330" height="185"/><rect x="742" y="478" width="330" height="185"/>
+    <circle cx="1028" cy="640" r="31"/>
+  </g>
+  <g fill="#333" font-family="Arial, sans-serif" font-size="15" text-anchor="middle">
+    <text x="78" y="52">LOGO</text><text x="913" y="52">HOME</text><text x="1018" y="52">BOOK</text>
+    <text x="550" y="160" font-size="22">HERO IMAGE</text><text x="550" y="230">PAGE DESCRIPTION</text>
+    <text x="550" y="310" font-size="19">HOW TO USE THE RECIPE BOOK</text><text x="550" y="344">Load a CSV · Browse cards · Open details · Search</text>
+    <text x="550" y="424">LOAD RECIPE BOOK</text><text x="550" y="466" font-size="22">RECIPE BOOK GRID</text>
+    <text x="193" y="522" font-size="18">RECIPE CARD</text><text x="193" y="560">Title · Category</text><text x="193" y="602">Ingredient preview</text>
+    <text x="550" y="522" font-size="18">RECIPE CARD</text><text x="550" y="560">Title · Category</text><text x="907" y="522" font-size="18">RECIPE CARD</text>
+    <text x="1028" y="646" font-size="20">⌕</text>
+  </g>
+</svg>

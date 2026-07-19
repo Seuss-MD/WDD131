@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Convert pasted recipe ingredients and instructions into clean recipe cards, then download or add them to a CSV recipe book.">
     <title>Paste to Plate</title>
     <link rel="stylesheet" href="styles/master.css">
     <link rel="stylesheet" href="styles/index.css">
@@ -11,7 +12,7 @@
 <body>
     <header>
         <nav>
-            <img class="img-logo" src="img/logo.png" alt="Paste to Plate logo">
+            <img class="img-logo" src="img/logo.png" alt="Paste to Plate logo" width="1024" height="1024">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="recipe-book.html">Recipe Book</a></li>
@@ -22,7 +23,7 @@
 
         <!-- Hero Section -->
         <section class="hero">
-            <img class="img-hero" src="img/hero.jpg" alt="Hero image of ingredients">
+            <img class="img-hero" src="img/hero.jpg" alt="Hero image of ingredients" width="525" height="350">
             <p class="hero-text">Paste to Plate is a recipe card and recipe book converter 
                 that takes messy recipe text from a website and displays it cleaned up. 
                 You can save it as a CSV file for later use.</p>
@@ -32,20 +33,33 @@
             <!-- Input Form for recipe -->
             <section class="form">
                 <h2>Paste your recipe</h2>
+                <div class="paste-help">
+                    <h3>How to enter a recipe</h3>
+                    <ol>
+                        <li>Paste the ingredient list into the Ingredients box, one ingredient per line.</li>
+                        <li>Paste the preparation steps into the Instructions box.</li>
+                        <li>Enter a title and category if you want; both are optional.</li>
+                        <li>Select <strong>Convert Recipe</strong> to preview the recipe card.</li>
+                    </ol>
+                </div>
                 
                 <form id="recipe-form" class="recipe-form">
                     <label for="recipe-title">Title:</label>
-                    <input type="text" id="recipe-title" name="recipe-title" required>
+                    <input type="text" id="recipe-title" name="recipe-title" placeholder="Optional">
                     
                     <label for="recipe-category">Category:</label>
-                    <input type="text" id="recipe-category" name="recipe-category" required>
+                    <input type="text" id="recipe-category" name="recipe-category" placeholder="Optional">
                     
-                    <label for="recipe-text">Directions:</label>
-                    <textarea id="recipe-text" name="recipe-text" rows="10" required></textarea>
+                    <label for="recipe-ingredients">Ingredients:</label>
+                    <textarea id="recipe-ingredients" name="recipe-ingredients" rows="8" required
+                        placeholder="1 cup flour&#10;2 eggs&#10;1/2 cup sugar"></textarea>
+
+                    <label for="recipe-instructions">Instructions:</label>
+                    <textarea id="recipe-instructions" name="recipe-instructions" rows="10" required
+                        placeholder="Mix the ingredients.&#10;Bake for 20 minutes."></textarea>
                     
-                    <div class="btn-submit">
-                        <p class="btn-text">Convert Recipe</p>
-                    </div>
+                    <div class="btn-submit" role="button" tabindex="0">Convert Recipe</div>
+                    <p id="form-message" role="status" aria-live="polite"></p>
                 </form>
             </section>
             

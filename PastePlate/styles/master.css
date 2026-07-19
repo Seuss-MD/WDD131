@@ -104,6 +104,8 @@ main {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
+	max-height: 100%;
+
 
 }
 .hero-text {
@@ -123,7 +125,6 @@ main {
 	line-height: 1.6;
 	text-align: center;
 
-	/* Circular transparent cutout at the top */
 	-webkit-mask:
 		radial-gradient(
 			ellipse 75% 55px at 50% 0,

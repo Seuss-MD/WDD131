@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="390" height="844" viewBox="0 0 390 844">
+  <rect width="389" height="843" fill="#fff" stroke="#222"/>
+  <g fill="none" stroke="#555" stroke-width="2">
+    <rect x="16" y="16" width="70" height="42"/><rect x="224" y="16" width="68" height="42"/><rect x="300" y="16" width="74" height="42"/>
+    <rect x="16" y="74" width="358" height="142"/><rect x="44" y="160" width="302" height="38" fill="#eee"/>
+    <rect x="16" y="232" width="358" height="126"/><rect x="92" y="376" width="206" height="44"/>
+    <rect x="16" y="454" width="358" height="142"/><rect x="16" y="614" width="358" height="142"/>
+    <circle cx="336" cy="794" r="30"/>
+  </g>
+  <g fill="#333" font-family="Arial, sans-serif" font-size="13" text-anchor="middle">
+    <text x="51" y="42">LOGO</text><text x="258" y="42">HOME</text><text x="337" y="42">BOOK</text>
+    <text x="195" y="132" font-size="18">HERO IMAGE</text><text x="195" y="184">PAGE DESCRIPTION</text>
+    <text x="195" y="260" font-size="17">HOW TO USE</text><text x="195" y="292">1. Load CSV</text><text x="195" y="316">2. Browse and search recipes</text>
+    <text x="195" y="403">LOAD RECIPE BOOK</text><text x="195" y="446" font-size="18">RECIPE BOOK</text>
+    <text x="195" y="482" font-size="17">RECIPE CARD</text><text x="195" y="530">Title · Category</text><text x="195" y="558">Ingredient preview</text>
+    <text x="195" y="642" font-size="17">RECIPE CARD</text><text x="195" y="690">Title · Category</text><text x="336" y="799" font-size="20">⌕</text>
+  </g>
+</svg>
