@@ -121,11 +121,6 @@ input, textarea {
 
 
 @media (min-width: 750px) { 
-.img-hero {
-    object-fit: fill;  
-
-}
-
 .recipe-card {
     display: flex;
     flex-direction: column;
